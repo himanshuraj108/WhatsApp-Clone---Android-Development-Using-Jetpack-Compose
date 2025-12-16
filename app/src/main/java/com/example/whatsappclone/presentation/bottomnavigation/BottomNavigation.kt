@@ -12,6 +12,7 @@ import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -23,12 +24,19 @@ import com.example.whatsappclone.R
 @Composable
 @Preview(showSystemUi = true)
 fun BottomNavigation(modifier: Modifier = Modifier) {
-    BottomAppBar(tonalElevation = 12.dp, containerColor = Color.White) {
+    BottomAppBar(
+        tonalElevation = 12.dp,
+        containerColor = Color.White
+    ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Icon(
                     painter = painterResource(R.drawable.message_4475881),
                     contentDescription = null,
@@ -37,7 +45,10 @@ fun BottomNavigation(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(text = "Chats", fontWeight = FontWeight.Bold)
             }
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Icon(
                     painter = painterResource(R.drawable.update_icon),
                     contentDescription = null,
@@ -46,7 +57,10 @@ fun BottomNavigation(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(text = "Updates", fontWeight = FontWeight.Bold)
             }
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Icon(
                     painter = painterResource(R.drawable.communities_icon),
                     contentDescription = null,
@@ -55,7 +69,10 @@ fun BottomNavigation(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(text = "Communities", fontWeight = FontWeight.Bold)
             }
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Icon(
                     painter = painterResource(R.drawable.telephone),
                     contentDescription = null,
