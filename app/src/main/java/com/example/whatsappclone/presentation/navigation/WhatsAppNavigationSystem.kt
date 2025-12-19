@@ -21,11 +21,11 @@ fun WhatsAppNavigationSystem(modifier: Modifier = Modifier) {
     NavHost(startDestination = Routes.SplashScreen, navController = navController) {
 
         composable<Routes.SplashScreen> {
-            SplashScreen()
+            SplashScreen(navController)
         }
 
         composable<Routes.WelcomeScreen> {
-            WelcomeScreen()
+            WelcomeScreen(navController)
         }
 
         composable<Routes.UserRegistrationScreen> {
