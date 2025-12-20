@@ -75,6 +75,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
+    implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation("androidx.compose.material:material-icons-extended:1.7.6")
+
     // --- Testing ---
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
