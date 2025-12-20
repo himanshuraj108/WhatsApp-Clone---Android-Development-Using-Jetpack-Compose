@@ -34,7 +34,7 @@ import com.example.whatsappclone.presentation.bottomnavigation.BottomNavigation
 
 
 @Composable
-fun HomeScreen(navHostController: NavHostController) {
+fun HomeScreen() {
     val chatData = listOf(
         ChatDesignModel(
             image = R.drawable.salmankhan, name = "Salman Khan", time = "10:00AM", message = "Hi"

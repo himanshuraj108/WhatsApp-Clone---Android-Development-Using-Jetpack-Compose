@@ -70,9 +70,9 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
 
     // --- DI (Hilt) ---
-    implementation("com.google.dagger:hilt-android:2.48.1")
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation(libs.firebase.crashlytics.buildtools)
-    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     implementation("io.coil-kt:coil-compose:2.7.0")
