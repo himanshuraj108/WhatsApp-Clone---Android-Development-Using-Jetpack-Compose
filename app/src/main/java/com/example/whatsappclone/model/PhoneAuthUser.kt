@@ -1,6 +1,6 @@
 package com.example.whatsappclone.model
 
-data class PhoneAuth(
+data class PhoneAuthUser(
     val userId: String = "",
     val phoneNumber: String = "",
     val name: String = "",
