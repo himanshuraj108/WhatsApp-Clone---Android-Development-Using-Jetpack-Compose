@@ -8,6 +8,7 @@ data class ChatListModel(
     val time: String? = null,
     val message: String? = null,
     val profileImage: String? = null
+
 ) {
     constructor() : this(null, null, null, null, null, null, null)
 }
