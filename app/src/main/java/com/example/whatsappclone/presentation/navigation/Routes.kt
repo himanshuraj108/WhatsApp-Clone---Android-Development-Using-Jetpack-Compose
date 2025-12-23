@@ -2,6 +2,7 @@ package com.example.whatsappclone.presentation.navigation
 
 import kotlinx.serialization.Serializable
 
+@Serializable
 sealed class Routes {
     @Serializable
     data object SplashScreen : Routes()
@@ -24,6 +25,15 @@ sealed class Routes {
     @Serializable
     data object CallScreen : Routes()
 
+    // Fixed: Added : Routes() inheritance
     @Serializable
-    data object UserProfileSetScreen
+    data object UserProfileSetScreen : Routes()
+
+    // Fixed: Added : Routes() inheritance
+    @Serializable
+    data object SettingScreen : Routes()
+
+    // Added: Route for Chat Details that requires a phone number
+    @Serializable
+    data class ChatDetailScreen(val phoneNumber: String) : Routes()
 }
