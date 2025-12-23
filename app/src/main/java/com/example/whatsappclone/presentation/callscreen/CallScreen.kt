@@ -13,12 +13,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.whatsappclone.R
 import com.example.whatsappclone.presentation.bottomnavigation.BottomNavigation
 
 @Composable
-@Preview(showSystemUi = true)
-fun CallScreen() {
+fun CallScreen(navHostController: NavHostController) {
 
     var isSearching by remember { mutableStateOf(false) }
     var search by remember { mutableStateOf("") }
@@ -210,7 +210,8 @@ fun CallScreen() {
         },
 
         bottomBar = {
-            BottomNavigation()
+            // Pass the navController here
+            BottomNavigation(navController = navHostController)
         },
 
         floatingActionButton = {
